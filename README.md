@@ -30,7 +30,7 @@ npm run install:all
 npm run dev
 ```
 
-To uruchomi jednocześnie serwer (port 3001) i klienta (port 3000).
+To uruchomi jednocześnie serwer (port 3003) i klienta (port 3002).
 
 ## Struktura projektu
 

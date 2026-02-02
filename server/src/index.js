@@ -12,7 +12,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: process.env.CLIENT_URL || "http://localhost:3002",
     methods: ["GET", "POST"]
   }
 });
@@ -306,7 +306,7 @@ setInterval(async () => {
   });
 }, 1000);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 httpServer.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

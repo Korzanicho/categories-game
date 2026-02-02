@@ -50,8 +50,8 @@ cp server/.env.example server/.env
 
 2. Edytuj plik `server/.env` i uzupełnij dane do połączenia z bazą danych:
 ```env
-PORT=3001
-CLIENT_URL=http://localhost:3000
+PORT=3003
+CLIENT_URL=http://localhost:3002
 
 DB_HOST=localhost
 DB_PORT=3306
@@ -76,7 +76,7 @@ cp client/.env.example client/.env
 
 2. Edytuj plik `client/.env` jeśli potrzebujesz zmienić URL serwera:
 ```env
-VITE_SERVER_URL=http://localhost:3001
+VITE_SERVER_URL=http://localhost:3003
 ```
 
 ## Uruchomienie
@@ -89,8 +89,8 @@ npm run dev
 ```
 
 To uruchomi:
-- Backend na porcie 3001
-- Frontend na porcie 3000
+- Backend na porcie 3003
+- Frontend na porcie 3002
 
 ### Ręczne uruchomienie
 
@@ -108,7 +108,7 @@ npm run dev
 
 ## Użycie
 
-1. Otwórz przeglądarkę i przejdź do `http://localhost:3000`
+1. Otwórz przeglądarkę i przejdź do `http://localhost:3002`
 2. Utwórz grę lub dołącz do istniejącej gry używając kodu pokoju
 3. Graj!
 
