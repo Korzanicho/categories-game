@@ -4,7 +4,7 @@ import { useGameStore } from '../store/gameStore';
 
 function LobbyScreen() {
   const navigate = useNavigate();
-  const { game, playerId, playerName, toggleReady, startGame } = useGameStore();
+  const { game, playerId, toggleReady, startGame } = useGameStore();
   
   const getPlayerName = (pId: string) => {
     if (pId === playerId) return 'Ty';
@@ -34,8 +34,8 @@ function LobbyScreen() {
   };
 
   const isCreator = game?.creatorId === playerId;
-  const otherPlayersReady = game?.players.filter(p => p !== game.creatorId && game.playerReady[p]).length || 0;
-  const canStart = otherPlayersReady >= 1 && game.players.length >= 2;
+  const otherPlayersReady = game ? game.players.filter(p => p !== game.creatorId && game.playerReady[p]).length : 0;
+  const canStart = otherPlayersReady >= 1 && game && game.players.length >= 2;
 
   if (!game) return null;
 

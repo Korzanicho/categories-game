@@ -4,7 +4,7 @@ import { useGameStore } from '../store/gameStore';
 
 function GameplayScreen() {
   const navigate = useNavigate();
-  const { game, playerId, submitAnswer, finishAnswers, getScores } = useGameStore();
+  const { game, playerId, submitAnswer, finishAnswers } = useGameStore();
   
   const getPlayerName = (pId: string) => {
     return game?.playerNames?.[pId] || `Gracz ${pId.slice(0, 8)}`;

@@ -12,7 +12,7 @@ import ScoresScreen from './screens/ScoresScreen';
 import SettingsScreen from './screens/SettingsScreen';
 
 function App() {
-  const { initializeSocket, playerId, playerName } = useGameStore();
+  const { initializeSocket, playerId } = useGameStore();
 
   useEffect(() => {
     if (!playerId) {
