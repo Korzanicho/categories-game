@@ -1,0 +1,26 @@
+.home-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.primary-button {
+  background: #667eea;
+  color: white;
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.secondary-button {
+  background: #6c757d;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+}
