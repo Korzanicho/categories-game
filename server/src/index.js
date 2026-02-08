@@ -10,9 +10,14 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const app = express();
 const httpServer = createServer(app);
+
+const corsOrigin = process.env.NODE_ENV === 'production'
+  ? (process.env.CLIENT_URL || "http://localhost:3002")
+  : (_origin, callback) => callback(null, true);
+
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:3002",
+    origin: corsOrigin,
     methods: ["GET", "POST"]
   }
 });

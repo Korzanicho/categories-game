@@ -60,10 +60,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
   scores: null,
 
   initializeSocket: () => {
-    const serverUrl = import.meta.env.VITE_SERVER_URL || 
-      (window.location.protocol === 'https:' 
-        ? 'https://panstwa-miasta.webkor.pl' 
-        : 'http://localhost:3003');
+    const serverUrl = import.meta.env.VITE_SERVER_URL || window.location.origin;
     const socket = io(serverUrl);
     
     socket.on('connect', () => {

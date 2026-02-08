@@ -92,6 +92,13 @@ To uruchomi:
 - Backend na porcie 3003
 - Frontend na porcie 3002
 
+### Test na telefonie (ta sama sieć Wi‑Fi)
+
+1. Uruchom `npm run dev` na komputerze.
+2. Sprawdź adres IP komputera w sieci (np. w Windows: `ipconfig`, szukaj IPv4 dla Wi‑Fi).
+3. Na telefonie (podłączonym do tej samej sieci Wi‑Fi) otwórz przeglądarkę i wejdź na: `http://<IP-komputera>:3002` (np. `http://192.168.1.100:3002`).
+4. Aplikacja powinna działać – Socket.io idzie przez proxy Vite do backendu na komputerze.
+
 ### Ręczne uruchomienie
 
 **Backend:**
